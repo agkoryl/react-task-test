@@ -29,3 +29,7 @@
 .user-details > p {
     font-weight: bold;
 }
+
+.user-content-container:hover {
+    filter: brightness(120%);
+}
