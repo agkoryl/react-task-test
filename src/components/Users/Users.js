@@ -27,28 +27,24 @@ class Users extends React.Component {
     }
 
     render() {
-        const {users} = this.state;
+        const { users } = this.state;
 
         return (
             <div className="content-container">
-                {users.map(user => 
-                            <div className="user-content-container" key={user.userId}>
-                                <div><img src={user.img} className="user-photo" alt="user-face"></img></div>
-                                <div className="user-details">
-                                <p>Imię: {user.userName}</p>
-                                <p>Nazwisko: {user.userLastName}</p>
-                                <p>Email: {user.userEmail}</p>
-                                </div>
-                            </div>
-                        )}
-        </div>
+                {users.map(user =>
+                    <div className="user-content-container" key={user.userId}>
+                        <div><img src={user.img} className="user-photo" alt="user-face"></img></div>
+                        <div className="user-details">
+                            <p>Imię: {user.userName}</p>
+                            <p>Nazwisko: {user.userLastName}</p>
+                            <p>Email: {user.userEmail}</p>
+                        </div>
+                    </div>
+                )}
+            </div>
         )
     }
-
-
-
 }
-
 
 
 export default Users;
